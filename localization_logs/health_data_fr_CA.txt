@@ -1,0 +1,9 @@
+Hi
+Lets get started
+Select Birthday
+Oct 26, 1996
+Select gender
+Male
+Female
+Others
+Prefer not to say

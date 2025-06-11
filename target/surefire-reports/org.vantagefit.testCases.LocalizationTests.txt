@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: org.vantagefit.testCases.LocalizationTests
+-------------------------------------------------------------------------------
+Tests run: 121, Failures: 1, Errors: 0, Skipped: 120, Time elapsed: 99.321 s <<< FAILURE! - in org.vantagefit.testCases.LocalizationTests
+ConfigureAppium(org.vantagefit.testCases.LocalizationTests)  Time elapsed: 1.601 s  <<< FAILURE!
+java.lang.NoSuchMethodError: 'void org.openqa.selenium.remote.http.ClientConfig.<init>(java.net.URI, java.time.Duration, java.time.Duration, org.openqa.selenium.remote.http.Filter, java.net.Proxy, org.openqa.selenium.Credentials)'
+

@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.VantageFit.test'
+version = '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://jitpack.io' }
+    google()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation group: 'org.testng', name: 'testng', version: '7.5'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    
+    // Selenium dependencies
+    implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+    implementation 'org.seleniumhq.selenium:selenium-api:4.15.0'
+    implementation 'org.seleniumhq.selenium:selenium-support:4.15.0'
+    
+    // Appium dependencies
+    implementation 'io.appium:java-client:9.0.0'
+    
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.9'
+    implementation 'com.optimaize.languagedetector:language-detector:0.6'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+test {
+    useTestNG() {
+        suites 'testng.xml'
+    }
+    testLogging {
+        events "passed", "skipped", "failed"
+        showExceptions true
+        showCauses true
+        showStackTraces true
+    }
+}
+

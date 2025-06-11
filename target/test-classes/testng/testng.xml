@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.vantagefit.testUtils.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/Users/raktimkakati/Documents/APPIUMLEARNING/AppiumProject/untitled">
+        <classes>
+            <class name="org.vantagefit.testCases.HomeTests"/>
+            <!--<class name="org.vantagefit.testCases.LoginWithWorkEMailTests"/>
+            <class name="org.vantagefit.testCases.SSOTests"/>
+            <class name="org.vantagefit.testCases.AgreementPageTests"/>
+            <class name="org.vantagefit.testCases.HealthRecordPageTests"/>
+            <class name="org.vantagefit.testCases.AddHealthDatatests"/>
+            <class name="org.vantagefit.testCases.ConnectGoogleFitTests"/>
+            <class name="org.vantagefit.testCases.FABMenuTests"/> -->
+        </classes>
+    </test>
+</suite>
+
