@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
 public class ConnectGoogleFitTests extends AndroidBaseTest {
 
     @BeforeMethod(alwaysRun = true)
@@ -28,7 +27,6 @@ public class ConnectGoogleFitTests extends AndroidBaseTest {
         };
         addHealthDataPages.clickLetsStartButton();
         ConnectGoogleFitPage connectGoogleFitPage = addHealthDataPages.navigateToConnectGoogleFitPage();
-
     }
 
     @Test(priority = 1, description = "TC 01 ConnectGoogleFitTests - Verify Connect Google Fit title is displayed")
@@ -65,8 +63,6 @@ public class ConnectGoogleFitTests extends AndroidBaseTest {
         connectGoogleFitPage.navigateThroughPermissions();
         HealthRecordPage healthRecordPage = new HealthRecordPage(driver);
         healthRecordPage.isSignInTextDisplayed();
-
-
     }
 
     @Test(priority = 6, description = "TC 06 ConnectGoogleFitTests -  Verify visibility of Allow button in physical activity permission")
@@ -107,7 +103,6 @@ public class ConnectGoogleFitTests extends AndroidBaseTest {
         Assert.assertTrue(connectGoogleFitPage.isDenyLocationButtonDisplayed(), "Deny button should be visible in location permission");
     }
 
-
     @Test(priority = 8, description = "TC 11 ConnectGoogleFitTests - Verify that clicking Skip on the Connect Google Fit page takes us to  notification permission")
     public void testClickSkipNavigatesToHomeWithNotificationPermission() {
         ConnectGoogleFitPage connectGoogleFitPage = new ConnectGoogleFitPage(driver);
@@ -138,7 +133,6 @@ public class ConnectGoogleFitTests extends AndroidBaseTest {
         connectGoogleFitPage.allowNotificationPermission();
         Assert.assertTrue(connectGoogleFitPage.isHomeScreenVisible(), "Home screen should be displayed after allowing notifications");
     }
-
 }
 
 

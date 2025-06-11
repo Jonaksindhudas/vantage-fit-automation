@@ -65,7 +65,11 @@ public class AndroidBaseTest extends AppiumUtils {
             options.setAdbExecTimeout(Duration.ofSeconds(60));
             options.setUiautomator2ServerLaunchTimeout(Duration.ofSeconds(60));
             options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(60));
-
+            
+            // Set default language to English
+            options.setCapability("language", "en");
+            options.setCapability("locale", "US");
+            
             driver = new AndroidDriver(new URL("http://" + ipAddress + ":" + port + "/wd/hub"), options);
             setDriver(driver);
             wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -137,7 +141,11 @@ public class AndroidBaseTest extends AppiumUtils {
             options.setUiautomator2ServerLaunchTimeout(Duration.ofSeconds(60));
             options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(60));
             
-            // Add language and locale capabilities if provided
+            // Set default language to English
+            options.setCapability("language", "en");
+            options.setCapability("locale", "US");
+            
+            // Add additional capabilities if provided
             if (additionalCapabilities != null) {
                 for (Map.Entry<String, String> entry : additionalCapabilities.entrySet()) {
                     options.setCapability(entry.getKey(), entry.getValue());
