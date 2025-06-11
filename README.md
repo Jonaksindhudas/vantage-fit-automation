@@ -20,7 +20,7 @@ This repository contains automated test scripts for the VantageFit mobile applic
 - Java
 - Appium
 - TestNG
-- Maven
+- Gradle
 - Extent Reports
 - Android SDK
 - iOS SDK
@@ -46,7 +46,7 @@ src/
 
 ## Prerequisites
 - Java JDK 8 or higher
-- Maven
+- Gradle
 - Appium Server
 - Android SDK (for Android testing)
 - Xcode (for iOS testing)
@@ -60,7 +60,7 @@ git clone https://github.com/Jonaksindhudas/vantage-fit-automation.git
 
 2. Install dependencies
 ```bash
-mvn clean install
+./gradlew clean build
 ```
 
 3. Configure test environment
@@ -70,11 +70,11 @@ mvn clean install
 
 4. Run tests
 ```bash
-mvn test
+./gradlew test
 ```
 
 ## Test Reports
-Test reports are generated in the `target/surefire-reports` directory after test execution. The reports include:
+Test reports are generated in the `build/reports/tests` directory after test execution. The reports include:
 - Test execution summary
 - Pass/fail status
 - Screenshots for failed tests
