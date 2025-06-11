@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Home Test Suite">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VantageFit App Test Suite">
     <listeners>
         <listener class-name="org.vantagefit.testUtils.Listeners"/>
     </listeners>
-    <test name="Home Tests Only" verbose="2" preserve-order="true">
+    
+    <test name="Agreement Page Tests">
         <classes>
-            <class name="org.vantagefit.testCases.HomeTests">
-                <methods>
-                    <include name="testNoDeviceConnectedMessageDisplayed"/>
-                </methods>
-            </class>
+            <class name="org.vantagefit.testCases.AgreementPageTests"/>
+        </classes>
+    </test>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.LoginWithWorkEMailTests"/>
+        </classes>
+    </test>
+
+    <test name="Home Page Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.HomeTests"/>
+        </classes>
+    </test>
+
+    <test name="Health Record Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.HealthRecordPageTests"/>
+        </classes>
+    </test>
+
+    <test name="FAB Menu Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.FABMenuTests"/>
+        </classes>
+    </test>
+
+    <test name="Add Health Data Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.AddHealthDatatests"/>
+        </classes>
+    </test>
+
+    <test name="Connect Google Fit Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.ConnectGoogleFitTests"/>
+        </classes>
+    </test>
+
+    <test name="SSO Tests">
+        <classes>
+            <class name="org.vantagefit.testCases.SSOTests"/>
         </classes>
     </test>
 </suite>
